@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand: #E8D9C4;
+  --color-sandDark: #DCC9AE;
+  --color-terracotta: #B5652E;
+  --color-sage: #8A9A6E;
+  --color-brown: #4A3C31;
+
+  --font-serif: var(--font-serif);
+  --font-script: var(--font-script);
+  --font-body: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
