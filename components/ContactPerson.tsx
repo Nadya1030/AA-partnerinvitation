@@ -4,7 +4,7 @@ type Contact = { name: string; role: string; email: string; whatsapp: string; ph
 
 const contacts: Contact[] = [
   { name: 'Nadya Aulia', role: 'Liaison Officer', email: 'nadyaauliatiaranii@gmail.com', whatsapp: '6285811363347', photo: '/images/Nadya.JPG' },
-  { name: 'Halifah Novia Rahmah', role: 'Liaison Officer', email: 'halifanoviaaa@gmail.com', whatsapp: '08291291', photo: '/images/rizal.png' },
+  { name: 'Halifah Novia Rahmah', role: 'Liaison Officer', email: 'halifanoviaaa@gmail.com', whatsapp: '6281347174246', photo: '/images/rizal.png' },
 ];
 
 export default function ReachUs() {
@@ -23,12 +23,9 @@ export default function ReachUs() {
                 <p className="font-serif text-sm text-brown truncate">{c.name}</p>
                 <p className="font-body text-[11px] text-brown/60 truncate">{c.role} - {c.email}</p>
               </div>
-              
-                href={`https://wa.me/${c.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] border border-terracotta text-terracotta px-2.5 py-1 rounded-full hover:bg-terracotta hover:text-sand transition shrink-0"
+              <a href={`https://wa.me/${c.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-[11px] border border-terracotta text-terracotta px-2.5 py-1 rounded-full hover:bg-terracotta hover:text-sand transition shrink-0">
                 WA
+              </a>
             </div>
           </Reveal>
         ))}
