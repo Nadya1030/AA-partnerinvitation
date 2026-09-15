@@ -16,7 +16,7 @@ export default function EventDetail() {
           <div className="flex items-start gap-3 text-left">
             <Calendar className="text-terracotta shrink-0 mt-1" size={22} />
             <div>
-              <p className="font-serif text-lg text-brown">Sabtu, 25 Oktober 2025</p>
+              <p className="font-serif text-lg text-brown">Minggu, 25 Oktober 2026</p>
               <p className="font-body text-sm text-brown/70 flex items-center gap-1">
                 <Clock size={14} /> 12:30 – 20:25 WIB
               </p>
