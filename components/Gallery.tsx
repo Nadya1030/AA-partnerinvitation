@@ -21,8 +21,9 @@ const photos = [
 ];
 
 export default function Gallery() {
-  const [selectedImg, setSelectedImg] = useState(null);
-  const [visibleCount, setVisibleCount] = useState(8); // Dinaikkan ke 8 agar pas dengan grid 4 kolom
+  // Ditambahkan tipe <string | null> agar TypeScript tidak menganggap tipe datanya hanya null
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState<number>(8);
 
   return (
     <section id="galeri" className="py-24 px-4 md:px-8 text-center bg-sand">

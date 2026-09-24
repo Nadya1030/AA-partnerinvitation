@@ -31,10 +31,11 @@ const testimonials = [
 ];
 
 export default function Testimoni() {
-  const scrollRef = useRef(null);
+  // 1. Menambahkan tipe HTMLDivElement pada useRef
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Fungsi untuk Tombol Geser Kiri-Kanan
-  const scroll = (direction) => {
+  // 2. Menambahkan tipe data pada parameter direction ('left' | 'right')
+  const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
       const scrollAmount = clientWidth * 0.75;
@@ -54,28 +55,28 @@ export default function Testimoni() {
         </div>
       </Reveal>
 
-      {/* Container Utama dengan Padding Lebih Luas untuk Panah */}
+      {/* Container Utama */}
       <div className="max-w-6xl mx-auto relative px-2 md:px-8">
         
-        {/* TOMBOL PANAH KIRI (DIPERLUAS KE LUAR CONTAINER) */}
+        {/* TOMBOL PANAH KIRI */}
         <button
           onClick={() => scroll('left')}
-          className="hidden md:flex absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-sand border border-brown/20 text-brown shadow-lg hover:bg-terracotta hover:text-white hover:scale-105 transition-all"
+          className="hidden md:flex absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-sand border border-brown/20 text-brown shadow-lg hover:bg-terracotta hover:text-white hover:scale-105 transition-all cursor-pointer"
           aria-label="Previous testimonial"
         >
           <ChevronLeft size={22} />
         </button>
 
-        {/* TOMBOL PANAH KANAN (DIPERLUAS KE LUAR CONTAINER) */}
+        {/* TOMBOL PANAH KANAN */}
         <button
           onClick={() => scroll('right')}
-          className="hidden md:flex absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-sand border border-brown/20 text-brown shadow-lg hover:bg-terracotta hover:text-white hover:scale-105 transition-all"
+          className="hidden md:flex absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-sand border border-brown/20 text-brown shadow-lg hover:bg-terracotta hover:text-white hover:scale-105 transition-all cursor-pointer"
           aria-label="Next testimonial"
         >
           <ChevronRight size={22} />
         </button>
 
-        {/* AREA CAROUSEL HORIZONTAL (OPTIMAL TOUCH SWIPE MOBILE) */}
+        {/* AREA CAROUSEL HORIZONTAL */}
         <div
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-6 px-4 touch-pan-x"
