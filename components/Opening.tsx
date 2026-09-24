@@ -8,7 +8,7 @@ export default function Opening({ onOpen }: { onOpen: () => void }) {
     <div
       className="h-screen w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/images/Gallery/foto3.JPG')",
+        backgroundImage: "url('/images/gallery/foto3.JPG')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
