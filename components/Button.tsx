@@ -4,7 +4,8 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export default function Button({ children, href, className = '', ...props }: ButtonProps) {
-  const style = `inline-block px-7 py-2.5 rounded-full border border-terracotta text-terracotta text-sm tracking-wide transition-all duration-200 hover:bg-terracotta hover:text-sand hover:shadow-md active:scale-95 ${className}`;
+  // Mengganti hover:text-cream menjadi hover:text-sand agar teks tetap terlihat jelas dan kontras saat di-hover
+  const style = `inline-block px-7 py-2.5 rounded-full border border-terracotta text-terracotta font-medium text-sm tracking-wide transition-all duration-300 hover:bg-terracotta hover:text-sand hover:shadow-md active:scale-95 cursor-pointer ${className}`;
 
   if (href) {
     return (

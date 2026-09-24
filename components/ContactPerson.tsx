@@ -3,33 +3,85 @@ import Reveal from './Reveal';
 type Contact = { name: string; role: string; email: string; whatsapp: string; photo: string };
 
 const contacts: Contact[] = [
-  { name: 'Nadya Aulia', role: 'Liaison Officer', email: 'nadyaauliatiaranii@gmail.com', whatsapp: '6285811363347', photo: '/images/Nadya.JPG' },
-  { name: 'Halifah Novia Rahmah', role: 'Liaison Officer', email: 'halifanoviaaa@gmail.com', whatsapp: '6281347174246', photo: '/images/rizal.png' },
+  { name: 'Dini Nur Latifah', role: 'Delegates Service', email: 'dininurltifah20@gmail.com', whatsapp: '6281511655320', photo: '/images/Dini.jpeg' },
+  { name: 'Suhaila Azza Kurzah', role: 'Delegates Service', email: 'suhailaazza@gmail.com', whatsapp: '6282157298386', photo: '/images/Ayla.JPG' },
 ];
 
-export default function ReachUs() {
+const partners = [
+  '/images/partner-1.png',
+  '/images/partner-2.png',
+  '/images/partner-3.png',
+];
+
+export default function ContactUs() {
   return (
-    <section id="kontak" className="py-16 px-8 text-center bg-sandDark">
+    <section id="kontak" className="py-24 px-6 md:px-12 bg-sand text-center">
+      {/* JUDUL UTAMA */}
       <Reveal>
-        <p className="font-script text-3xl text-terracotta mb-6">Reach Us for More Info</p>
+        <p className="font-script text-6xl md:text-7xl text-terracotta mb-12">Reach Us for More Info</p>
       </Reveal>
 
-      <div className="space-y-3 max-w-xs mx-auto">
-        {contacts.map((c, i) => (
-          <Reveal key={c.whatsapp} delay={150 * (i + 1)}>
-            <div className="flex items-center gap-3 bg-sand/60 rounded-xl px-3 py-2 text-left">
-              <img src={c.photo} alt={c.name} className="w-10 h-10 rounded-full object-cover shrink-0" />
-              <div className="flex-1 min-w-0">
-                <p className="font-serif text-sm text-brown truncate">{c.name}</p>
-                <p className="font-body text-[11px] text-brown/60 truncate">{c.role} - {c.email}</p>
-              </div>
-              <a href={`https://wa.me/${c.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-[11px] border border-terracotta text-terracotta px-2.5 py-1 rounded-full hover:bg-terracotta hover:text-sand transition shrink-0">
-                WA
+      {/* DUA KONTAK SEBELAHAN (CONTAINER DIPERBESAR) */}
+      <Reveal delay={100}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          {contacts.map((c) => (
+            <div
+              key={c.whatsapp}
+              className="flex flex-col items-center bg-sandDark/60 border border-terracotta/20 rounded-2xl p-6 md:p-8 shadow-sm transition-transform hover:-translate-y-1"
+            >
+              <img
+                src={c.photo}
+                alt={c.name}
+                className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-white shadow-md"
+              />
+              <p className="font-serif text-lg md:text-xl text-brown font-semibold text-center">{c.name}</p>
+              <p className="font-body text-xs md:text-sm text-terracotta font-medium tracking-wide uppercase text-center mt-0.5">{c.role}</p>
+              <p className="font-body text-xs md:text-sm text-brown/70 text-center mt-1 mb-5 break-all">{c.email}</p>
+              
+              {/* TOMBOL WHATSAPP LENGKAP DENGAN TEKS */}
+              <a
+                href={`https://wa.me/${c.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-terracotta text-terracotta font-body text-xs md:text-sm font-semibold hover:bg-terracotta hover:text-sand transition-all shadow-xs"
+                aria-label={`WhatsApp ${c.name}`}
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
+                  <path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.85 13.34L3 21l3.79-1.13A8.9 8.9 0 0 0 12.05 21h.01a8.94 8.94 0 0 0 5.54-15.68ZM12.06 19.4a7.38 7.38 0 0 1-3.77-1.03l-.27-.16-2.8.83.83-2.73-.18-.28a7.42 7.42 0 1 1 13.79-3.9 7.4 7.4 0 0 1-7.6 7.27Zm4.06-5.56c-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05a6.1 6.1 0 0 1-1.79-1.1 6.7 6.7 0 0 1-1.24-1.54c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.83.83 0 0 0-.6.28 2.53 2.53 0 0 0-.79 1.88c0 1.1.8 2.17.91 2.32.11.15 1.57 2.4 3.81 3.36.53.23.95.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.3-.53 1.48-1.04.18-.51.18-.95.13-1.04-.05-.09-.2-.15-.42-.26Z" />
+                </svg>
+                <span>Chat via WhatsApp</span>
               </a>
             </div>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Reveal>
+
+      {/* GARIS PENJEMBATAN */}
+      <Reveal delay={200}>
+        <div className="flex flex-col items-center my-14">
+          <div className="w-[1px] h-20 bg-terracotta/40" />
+          <div className="w-2.5 h-2.5 rounded-full bg-terracotta mt-1" />
+        </div>
+      </Reveal>
+
+      {/* SUPPORTED BY / PARTNERS */}
+      {partners.length > 0 && (
+        <Reveal delay={300}>
+          <p className="font-body text-xs md:text-sm uppercase tracking-[0.2em] text-brown/60 mb-6 font-semibold">
+            Supported By
+          </p>
+          <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap">
+            {partners.map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt={`Partner ${i + 1}`}
+                className="h-12 md:h-16 object-contain opacity-85 hover:opacity-100 transition-opacity"
+              />
+            ))}
+          </div>
+        </Reveal>
+      )}
     </section>
   );
 }

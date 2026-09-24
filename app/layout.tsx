@@ -21,8 +21,8 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: '12th Aktjaya Anniversary',
-  description: 'Undangan digital 12th Aktjaya Anniversary',
+  title: '13th Aktjaya Anniversary',
+  description: 'Undangan digital 13th Aktjaya Anniversary',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

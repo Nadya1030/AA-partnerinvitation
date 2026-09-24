@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import Opening from '@/components/Opening';
 import Beranda from '@/components/Beranda';
@@ -9,6 +10,8 @@ import Gallery from '@/components/Gallery';
 import Kehadiran from '@/components/Kehadiran';
 import Closing from '@/components/Countdown';
 import ReachUs from '@/components/ContactPerson';
+import WordsFromOCP from '@/components/WordsFromOCP';
+import Bridging from '@/components/Bridging';
 
 export default function Home() {
   const [opened, setOpened] = useState(false);
@@ -16,8 +19,10 @@ export default function Home() {
   if (!opened) return <Opening onOpen={() => setOpened(true)} />;
 
   return (
-    <div className="snap-container">
+    <main className="relative bg-sand min-h-screen overflow-x-hidden">
       <Beranda />
+      <Bridging />
+      <WordsFromOCP />
       <EventDetail />
       <DressCode />
       <Testimoni />
@@ -25,6 +30,6 @@ export default function Home() {
       <Kehadiran />
       <Closing />
       <ReachUs />
-    </div>
+    </main>
   );
 }

@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import Reveal from './Reveal';
 
@@ -35,21 +36,42 @@ export default function Closing() {
   ];
 
   return (
-    <section id="countdown" className="py-20 px-8 text-center bg-sand">
-      <Reveal>
-        <div className="flex gap-3 justify-center mb-10">
-          {units.map((u) => (
-            <div key={u.label} className="bg-white/70 rounded-lg px-4 py-3 min-w-[60px]">
-              <p className="font-serif text-2xl font-semibold text-terracotta">{u.value}</p>
-              <p className="font-body text-[10px] uppercase tracking-wide text-brown/60">{u.label}</p>
-            </div>
-          ))}
-        </div>
-      </Reveal>
+    <section id="countdown" className="py-24 px-8 text-center relative overflow-hidden min-h-[400px] flex items-center justify-center">
+      
+      {/* ELEMEN VIDEO BACKGROUND */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/videos/00009.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung tag video.
+      </video>
 
-      <Reveal delay={150}>
-        <p className="font-script text-4xl text-terracotta">See You Soon, Aktjaya!</p>
-      </Reveal>
+      {/* OVERLAY GELAP AGAR TEKS TETAP JELAS DIBACA */}
+      <div className="absolute inset-0 bg-black/60 z-10" />
+
+      {/* KONTEN UTAMA */}
+      <div className="relative z-20">
+        <Reveal>
+          <div className="flex gap-3 sm:gap-4 justify-center mb-10">
+            {units.map((u) => (
+              <div key={u.label} className="bg-white/90 backdrop-blur-xs rounded-xl px-4 py-3 min-w-[70px] shadow-lg">
+                <p className="font-serif text-2xl sm:text-3xl font-bold text-terracotta">{u.value}</p>
+                <p className="font-body text-[10px] sm:text-xs uppercase tracking-wider text-brown font-semibold">{u.label}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={150}>
+          <p className="font-script text-5xl md:text-6xl text-white drop-shadow-md">
+            See You Soon, Aktjaya!
+          </p>
+        </Reveal>
+      </div>
     </section>
   );
 }
