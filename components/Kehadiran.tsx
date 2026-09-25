@@ -11,7 +11,7 @@ export default function Kehadiran() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-terracotta/5 rounded-full blur-3xl pointer-events-none" />
 
       <Reveal>
-        <p className="font-script text-4xl md:text-5xl text-terracotta">
+        <p className="font-script text-6xl md:text-5xl text-terracotta">
           So, are You Joining Us?
         </p>
         <BohemianDivider />
@@ -38,7 +38,7 @@ export default function Kehadiran() {
             <div className="inline-block relative group mb-6">
               <div className="absolute -inset-1 bg-terracotta/20 rounded-full blur-sm group-hover:bg-terracotta/40 transition-all duration-300" />
               <div className="relative">
-                <Button href="https://forms.gle/GANTI_DENGAN_LINK_GFORM_KAMU" target="_blank">
+                <Button href="https://forms.gle/QbBdQ8YvDXKrKv1k6" target="_blank">
                   Count Me In!
                 </Button>
               </div>

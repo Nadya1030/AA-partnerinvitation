@@ -27,7 +27,7 @@ export default function WordsFromOCP() {
             <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
               {/* Foto kiri, pakai bingkai floral */}
               <div className="w-full md:w-2/5 shrink-0">
-                <ArchPhoto src="/images/DSC01746.JPG" alt="Azda" />
+                <ArchPhoto src="/images/azda.jpeg" alt="Azda" />
               </div>
 
               {/* Teks kanan, tanpa container/background internal */}

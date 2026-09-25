@@ -71,6 +71,11 @@ export default function Closing() {
             See You Soon, Aktjaya!
           </p>
         </Reveal>
+        <Reveal delay={300}>
+          <p className="font-body text-2xl sm:text-3xl text-sand/80 italic">
+              — #TakKoenjoengBinasa —
+          </p>
+        </Reveal>
       </div>
     </section>
   );

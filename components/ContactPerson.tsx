@@ -4,12 +4,12 @@ type Contact = { name: string; role: string; email: string; whatsapp: string; ph
 
 const contacts: Contact[] = [
   { name: 'Dini Nur Latifah', role: 'Delegates Service', email: 'dininurltifah20@gmail.com', whatsapp: '6281511655320', photo: '/images/Dini.jpeg' },
-  { name: 'Suhaila Azza Kurzah', role: 'Delegates Service', email: 'suhailaazza@gmail.com', whatsapp: '6282157298386', photo: '/images/Ayla.JPG' },
+  { name: 'Suhaila Azza Kurzah', role: 'Delegates Service', email: 'suhailaazza@gmail.com', whatsapp: '6282157298386', photo: '/images/Ayla.jpeg' },
 ];
 
 const partners = [
-  '/images/partner-1.png',
-  '/images/partner-2.png',
+  '/images/partners/JoeandJoy.jpeg',
+  '/images/partners/Somethinc.PNG',
   '/images/partner-3.png',
 ];
 
@@ -76,7 +76,7 @@ export default function ContactUs() {
                 key={i}
                 src={logo}
                 alt={`Partner ${i + 1}`}
-                className="h-12 md:h-16 object-contain opacity-85 hover:opacity-100 transition-opacity"
+                className="h-12 md:h-26 object-contain opacity-100 hover:opacity-100 transition-opacity"
               />
             ))}
           </div>
