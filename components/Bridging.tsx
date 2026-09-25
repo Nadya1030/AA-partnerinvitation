@@ -4,7 +4,7 @@ import BohemianDivider from './BohemianDivider';
 export default function Bridging() {
   return (
     // Padding vertikal dibuat tinggi (py-40 md:py-60) agar containernya panjang
-    <section className="py-40 md:py-60 px-6 md:px-12 bg-sand text-center relative overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
+    <section className="py-40 md:py-60 px-6 md:px-12 bg-[#F3F4F7] text-center relative overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
       
       {/* GARIS PENJEMBATAN ATAS */}
       <Reveal>

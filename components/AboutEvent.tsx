@@ -11,7 +11,8 @@ export default function EventDetail() {
   ];
 
   return (
-    <section id="acara" className="py-24 px-4 md:px-12 bg-sand relative">
+    // Menggunakan bg-[#F3F4F7] pada section
+    <section id="acara" className="py-24 px-4 md:px-12 bg-[#F3F4F7] relative">
       <Reveal>
         <div className="text-center mb-10">
           <p className="font-script text-7xl md:text-8xl text-terracotta">Event Details</p>
@@ -23,7 +24,7 @@ export default function EventDetail() {
         
         {/* GARIS PEMBATAS VERTIKAL TENGAH */}
         <div className="absolute left-1/2 top-4 bottom-2 -translate-x-1/2 w-px bg-terracotta/30">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-terracotta rounded-full border-2 border-sandDark" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-green rounded-full border-2 border-[#F3F4F7]" />
         </div>
 
         {/* SISI KIRI: WAKTU & LOKASI (RATA KANAN) */}

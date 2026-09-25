@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`${playfair.variable} ${alexBrush.variable} ${jost.variable}`}>
-      <body className="font-body bg-sand text-brown">{children}</body>
+      <body className="font-body bg-[#F3F4F7] text-brown">{children}</body>
     </html>
   );
 }

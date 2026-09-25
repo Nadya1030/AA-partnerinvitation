@@ -31,10 +31,8 @@ const testimonials = [
 ];
 
 export default function Testimoni() {
-  // 1. Menambahkan tipe HTMLDivElement pada useRef
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // 2. Menambahkan tipe data pada parameter direction ('left' | 'right')
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
@@ -47,10 +45,11 @@ export default function Testimoni() {
   };
 
   return (
-    <section id="testimoni" className="py-20 px-4 md:px-12 bg-sand overflow-hidden">
+    // Background section diubah jadi putih bersih (bg-white)
+    <section id="testimoni" className="py-20 px-4 md:px-12 bg-white overflow-hidden">
       <Reveal>
         <div className="text-center mb-12">
-          <p className="font-script text-4xl md:text-5xl text-terracotta">Words From Them</p>
+          <p className="font-script text-6xl md:text-5xl text-terracotta">Words From Them</p>
           <BohemianDivider />
         </div>
       </Reveal>
@@ -58,22 +57,22 @@ export default function Testimoni() {
       {/* Container Utama */}
       <div className="max-w-6xl mx-auto relative px-2 md:px-8">
         
-        {/* TOMBOL PANAH KIRI */}
+        {/* TOMBOL PANAH KIRI (Kontras diperjelas dengan background terracotta/cokelat) */}
         <button
           onClick={() => scroll('left')}
-          className="hidden md:flex absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-sand border border-brown/20 text-brown shadow-lg hover:bg-terracotta hover:text-white hover:scale-105 transition-all cursor-pointer"
+          className="hidden md:flex absolute -left-2 lg:-left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 items-center justify-center rounded-full bg-terracotta text-white shadow-xl hover:bg-brown hover:scale-110 active:scale-95 transition-all cursor-pointer border-2 border-white"
           aria-label="Previous testimonial"
         >
-          <ChevronLeft size={22} />
+          <ChevronLeft size={24} />
         </button>
 
-        {/* TOMBOL PANAH KANAN */}
+        {/* TOMBOL PANAH KANAN (Kontras diperjelas dengan background terracotta/cokelat) */}
         <button
           onClick={() => scroll('right')}
-          className="hidden md:flex absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-30 w-11 h-11 items-center justify-center rounded-full bg-sand border border-brown/20 text-brown shadow-lg hover:bg-terracotta hover:text-white hover:scale-105 transition-all cursor-pointer"
+          className="hidden md:flex absolute -right-2 lg:-right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 items-center justify-center rounded-full bg-terracotta text-white shadow-xl hover:bg-brown hover:scale-110 active:scale-95 transition-all cursor-pointer border-2 border-white"
           aria-label="Next testimonial"
         >
-          <ChevronRight size={22} />
+          <ChevronRight size={24} />
         </button>
 
         {/* AREA CAROUSEL HORIZONTAL */}
@@ -93,7 +92,7 @@ export default function Testimoni() {
             >
               {/* FOTO PROFIL LINGKARAN */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
-                <div className="w-20 h-20 rounded-full p-1 bg-sandDark">
+                <div className="w-20 h-20 rounded-full p-1 bg-terracotta/20 backdrop-blur-xs">
                   <img
                     src={t.avatar}
                     alt={t.name}
@@ -102,12 +101,12 @@ export default function Testimoni() {
                 </div>
               </div>
 
-              {/* CARD TESTIMONI */}
-              <div className="bg-[#FAF7F2] rounded-3xl pt-12 pb-8 px-6 shadow-[0_12px_28px_-6px_rgba(74,59,50,0.1)] border border-white/80 text-center relative z-10 h-full flex flex-col justify-between">
+              {/* CARD TESTIMONI (Warna diubah ke bg-[#FAF7F2] agar hangat & manis di atas bg-white) */}
+              <div className="bg-[#FAF7F2] rounded-3xl pt-12 pb-8 px-6 border border-brown/10 text-center relative z-10 h-full flex flex-col justify-between">
                 
                 <div>
                   {/* RATING BINTANG */}
-                  <div className="flex justify-center gap-1 text-terracotta/80 mb-3">
+                  <div className="flex justify-center gap-1 text-terracotta mb-3">
                     {[...Array(5)].map((_, idx) => (
                       <Star key={idx} size={15} fill="currentColor" stroke="none" />
                     ))}

@@ -59,7 +59,7 @@ export default function Closing() {
           <div className="flex gap-3 sm:gap-4 justify-center mb-10">
             {units.map((u) => (
               <div key={u.label} className="bg-white/90 backdrop-blur-xs rounded-xl px-4 py-3 min-w-[70px] shadow-lg">
-                <p className="font-serif text-2xl sm:text-3xl font-bold text-terracotta">{u.value}</p>
+                <p className="font-serif text-2xl sm:text-3xl font-bold text-blue">{u.value}</p>
                 <p className="font-body text-[10px] sm:text-xs uppercase tracking-wider text-brown font-semibold">{u.label}</p>
               </div>
             ))}

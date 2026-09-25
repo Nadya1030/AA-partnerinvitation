@@ -8,13 +8,13 @@ export default function Opening({ onOpen }: { onOpen: () => void }) {
     <div
       className="h-screen w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/images/Gallery/foto3.JPG')",
+        backgroundImage: "url('/images/Gallery/foto12.JPG')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       {/* OVERLAY GELAP DENGAN SENTUHAN GRADIENT */}
-      <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/50 via-black/60 to-black/80" />
+      <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/50 via-black/60 to-black/50" />
 
       {/* KONTEN UTAMA - TANPA GLASS CARD */}
       <div className="relative z-10 text-white max-w-2xl mx-auto space-y-6 flex flex-col items-center">

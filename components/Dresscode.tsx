@@ -13,7 +13,7 @@ export default function DressCode() {
   ];
 
   return (
-    <section id="dresscode" className="py-24 px-6 md:px-12 text-center bg-sand">
+    <section id="dresscode" className="py-24 px-6 md:px-12 text-center bg-[#F3F4F7]">
       {/* JUDUL UTAMA */}
       <Reveal>
         <p className="font-script text-7xl md:text-8xl text-terracotta">Dress Code</p>

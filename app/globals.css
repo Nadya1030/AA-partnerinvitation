@@ -6,8 +6,11 @@
   --color-terracotta: #B5652E;
   --color-sage: #8A9A6E;
   --color-brown: #4A3C31;
+  --color-green: #7A8061;
+  --color-white: #F3F4F7;
+  --color-blue: #1B3C53;
 
-  --font-serif: var(--font-serif);
+  --font-inter: var(--font-inter);
   --font-script: var(--font-script);
   --font-body: var(--font-body);
 }

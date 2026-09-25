@@ -5,14 +5,14 @@ import { Mail, CalendarCheck } from 'lucide-react';
 
 export default function Kehadiran() {
   return (
-    <section id="kehadiran" className="py-20 px-4 md:px-8 text-center bg-sand relative overflow-hidden">
+    <section id="kehadiran" className="py-20 px-4 md:px-8 text-center bg-[#F3F4F7] relative overflow-hidden">
       
       {/* DEKORASI BACKGROUND BOTANIKAL BOHO (TIPIS & ESTETIK) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-terracotta/5 rounded-full blur-3xl pointer-events-none" />
 
       <Reveal>
         <p className="font-script text-4xl md:text-5xl text-terracotta">
-          Kindly Confirm Your Attendance
+          So, are You Joining Us?
         </p>
         <BohemianDivider />
       </Reveal>
@@ -25,7 +25,7 @@ export default function Kehadiran() {
           <div className="border border-dashed border-terracotta/30 rounded-t-[85px] rounded-b-2xl p-6 md:p-8">
             
             {/* IKON SURAT BOHO */}
-            <div className="w-12 h-12 bg-sand rounded-full flex items-center justify-center mx-auto mb-6 text-terracotta border border-terracotta/20 shadow-xs">
+            <div className="w-12 h-12 bg-sand rounded-full flex items-center justify-center mx-auto mb-6 text-blue border border-terracotta/20 shadow-xs">
               <Mail size={22} />
             </div>
 

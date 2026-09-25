@@ -18,6 +18,12 @@ const photos = [
   { src: '/images/gallery/foto12.JPG', alt: 'Kenangan 12', span: 'col-span-1 md:col-span-2 row-span-1' },
   { src: '/images/gallery/foto13.JPG', alt: 'Kenangan 13', span: 'col-span-1 md:col-span-1 row-span-1' },
   { src: '/images/gallery/foto14.JPG', alt: 'Kenangan 14', span: 'col-span-1 md:col-span-1 row-span-1' },
+  { src: '/images/gallery/foto15.JPG', alt: 'Kenangan 15', span: 'col-span-1 md:col-span-1 row-span-1' },
+  { src: '/images/gallery/foto16.JPG', alt: 'Kenangan 16', span: 'col-span-1 md:col-span-1 row-span-2' },
+  { src: '/images/gallery/foto17.JPG', alt: 'Kenangan 17', span: 'col-span-1 md:col-span-1 row-span-1' },
+  { src: '/images/gallery/foto18.JPG', alt: 'Kenangan 18', span: 'col-span-1 md:col-span-2 row-span-1' },
+  { src: '/images/gallery/foto19.JPG', alt: 'Kenangan 19', span: 'col-span-1 md:col-span-1 row-span-1' },
+  { src: '/images/gallery/foto14.JPG', alt: 'Kenangan 20', span: 'col-span-1 md:col-span-1 row-span-1' },
 ];
 
 export default function Gallery() {
@@ -26,7 +32,7 @@ export default function Gallery() {
   const [visibleCount, setVisibleCount] = useState<number>(8);
 
   return (
-    <section id="galeri" className="py-24 px-4 md:px-8 text-center bg-sand">
+    <section id="galeri" className="py-24 px-4 md:px-8 text-center bg-[#F3F4F7]">
       <Reveal>
         <p className="font-script text-6xl md:text-7xl text-terracotta">Let's Throwback</p>
         <p className="font-body text-sm md:text-base text-brown/70 mt-2">

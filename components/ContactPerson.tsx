@@ -15,19 +15,19 @@ const partners = [
 
 export default function ContactUs() {
   return (
-    <section id="kontak" className="py-24 px-6 md:px-12 bg-sand text-center">
+    <section id="kontak" className="py-24 px-6 md:px-12 bg-white text-center">
       {/* JUDUL UTAMA */}
       <Reveal>
-        <p className="font-script text-6xl md:text-7xl text-terracotta mb-12">Reach Us for More Info</p>
+        <p className="font-script text-6xl md:text-7xl text-blue mb-12">Reach Us out!📞</p>
       </Reveal>
 
-      {/* DUA KONTAK SEBELAHAN (CONTAINER DIPERBESAR) */}
+      {/* DUA KONTAK SEBELAHAN */}
       <Reveal delay={100}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {contacts.map((c) => (
             <div
               key={c.whatsapp}
-              className="flex flex-col items-center bg-sandDark/60 border border-terracotta/20 rounded-2xl p-6 md:p-8 shadow-sm transition-transform hover:-translate-y-1"
+              className="flex flex-col items-center bg-gradient-to-br from-/15 via-green/10 to-blue/15 backdrop-blur-md border border-[#7A8061]/20 rounded-3xl p-6 md:p-8 transition-all hover:-translate-y-1 hover:border-[#7A8061]/40"
             >
               <img
                 src={c.photo}
@@ -35,15 +35,15 @@ export default function ContactUs() {
                 className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-white shadow-md"
               />
               <p className="font-serif text-lg md:text-xl text-brown font-semibold text-center">{c.name}</p>
-              <p className="font-body text-xs md:text-sm text-terracotta font-medium tracking-wide uppercase text-center mt-0.5">{c.role}</p>
+              <p className="font-body text-xs md:text-sm text-[#7A8061] font-medium tracking-wide uppercase text-center mt-0.5">{c.role}</p>
               <p className="font-body text-xs md:text-sm text-brown/70 text-center mt-1 mb-5 break-all">{c.email}</p>
               
-              {/* TOMBOL WHATSAPP LENGKAP DENGAN TEKS */}
+              {/* TOMBOL WHATSAPP */}
               <a
                 href={`https://wa.me/${c.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-terracotta text-terracotta font-body text-xs md:text-sm font-semibold hover:bg-terracotta hover:text-sand transition-all shadow-xs"
+                className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full border border-[#7A8061] text-[#7A8061] font-body text-xs md:text-sm font-semibold hover:bg-[#7A8061] hover:text-white transition-all shadow-xs"
                 aria-label={`WhatsApp ${c.name}`}
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
@@ -59,15 +59,15 @@ export default function ContactUs() {
       {/* GARIS PENJEMBATAN */}
       <Reveal delay={200}>
         <div className="flex flex-col items-center my-14">
-          <div className="w-[1px] h-20 bg-terracotta/40" />
-          <div className="w-2.5 h-2.5 rounded-full bg-terracotta mt-1" />
+          <div className="w-[1px] h-20 bg-[#7A8061]/30" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#7A8061] mt-1" />
         </div>
       </Reveal>
 
       {/* SUPPORTED BY / PARTNERS */}
       {partners.length > 0 && (
         <Reveal delay={300}>
-          <p className="font-body text-xs md:text-sm uppercase tracking-[0.2em] text-brown/60 mb-6 font-semibold">
+          <p className="font-body text-xs md:text-sm uppercase tracking-[0.2em] text-[#5B7B88] mb-6 font-semibold">
             Supported By
           </p>
           <div className="flex items-center justify-center gap-8 md:gap-12 flex-wrap">
