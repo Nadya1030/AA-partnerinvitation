@@ -5,7 +5,7 @@ const messages = [
   {
     name: 'Organizing Committee President of AA 13th',
     quote:
-      'Dengan penuh syukur, kami dari Organizing Committee Panitia mengucapkan terima kasih atas kepercayaan dan dukungan selama proses persiapan acara ini. Semoga momen kebersamaan ini menjadi kenangan berharga bagi kita semua.',
+      'With great joy, I warmly welcome you to the 13th Anniversary of Aktjaya. Aktjaya Anniversary merupakan annual celebration of AIESEC in Untan, yang menjadi momen bagi seluruh generasi Aktjaya untuk come together, celebrate our journey, growth, and the meaningful connections we have built throughout the years. Memasuki tahun ke-13, semoga perayaan ini menjadi kesempatan untuk reconnect, create new memories, and appreciate every story that has shaped Aktjaya into what it is today. May this celebration remind us that, wherever our journey takes us, Aktjaya will always be a place we can return to and call home. welcome, and let’s celebrate this beautiful journey together! ',
   },
 ];
 
@@ -37,7 +37,7 @@ export default function WordsFromOCP() {
 
                 {messages.map((m) => (
                   <div key={m.name}>
-                    <p className="font-body text-sm leading-relaxed text-terracotta/90">
+                    <p className="font-inter text-sm leading-relaxed text-brownDark/90">
                       {m.quote}
                     </p>
                     <p className="font-inter text-sm text-terracotta mt-4">— {m.name}</p>
